@@ -9,15 +9,15 @@ startt=$SECONDS
 
 for disk in "$@"
 do
-	echo sudo /usr/bin/shred ${SHREDOPTS} /dev/$disk &
+	sudo /usr/bin/shred ${SHREDOPTS} /dev/$disk &
 done
 
 wait
 
-echo sudo sync
+sudo sync
 # My USB3 dual disk toaster powers off both disks with call to either.
 # If that is not your setup, make this a loop
-echo sudo udiskctl power-off -b /dev/$1
+sudo udiskctl power-off -b /dev/$1
 
 endt=$SECONDS
 elapsedt=$(( endt - startt ))
