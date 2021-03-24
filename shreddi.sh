@@ -15,6 +15,8 @@ done
 wait
 
 sudo sync
+sudo sync
+sudo sync
 # My USB3 dual disk toaster powers off both disks with call to either.
 # If that is not your setup, make this a loop
 sudo udiskctl power-off -b /dev/$1
