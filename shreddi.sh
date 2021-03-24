@@ -21,7 +21,7 @@ sudo sync
 # My USB dual disk toaster powers off both disks with call to either
 for disk in "$@"
 do
-    [ -e /dev/$1 ] && sudo udiskctl power-off -b /dev/$1
+    [ -e /dev/$1 ] && sudo udisksctl power-off -b /dev/$1
 done
 
 endt=$SECONDS
